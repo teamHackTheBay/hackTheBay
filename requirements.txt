@@ -1,0 +1,10 @@
+Cython==0.29.21
+gunicorn==19.9.0
+matplotlib==3.2.2
+numpy==1.19.0
+pandas==1.0.5
+Pillow==7.2.0
+plotly==4.8.2
+streamlit==0.66.0
+pybase64==1.0.1
+xlrd>=1.0.0
