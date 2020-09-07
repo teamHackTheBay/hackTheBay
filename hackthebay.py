@@ -19,29 +19,45 @@ def main():
 #Intro
     if option == 'Intro to the Chesapeake Bay Challenge':
         st.title('Intro to the Chesapeake Bay Challenge')
-        crossref_temp = """
-        <div style="background-color:#E31C3C;padding:1px">
+        title_page = """
+        <div style="background-color:#33A2FF;padding:1px">
         <h3 style="color:#313F3D;text-align:center;">Intro to the Chesapeake Bay Challenge</h3>
         </div>
         """
         st.markdown(title_page,unsafe_allow_html=True)
 
-        crossref_write = """
+        if st.sidebar.checkbox('Sidebar'):
+            html_temp = """
+            <div style="background-color:#33A2FF;padding:1px">
+            <h4 style="color:#212F3D;text-align:center;">Sidebar</h4>
+            </div>
+            """
+            st.markdown(html_temp,unsafe_allow_html=True)
+
+        title_write = """
         put writing here Jen
         """
 
-        st.markdown(title_page,unsafe_allow_html=True)
+        st.markdown(title_write,unsafe_allow_html=True)
 
 
 #Data Preparation
     elif option == 'Data Preparation':
         st.title('Data Preparation')
         html_temp = """
-        <div style="background-color:#E31C3C;padding:1px">
+        <div style="background-color:#33A2FF;padding:1px">
         <h3 style="color:#212F3D;text-align:center;">Data Preparation</h3>
         </div>
         """
         st.markdown(html_temp,unsafe_allow_html=True)
+
+        if st.sidebar.checkbox('Sidebar'):
+            html_temp = """
+            <div style="background-color:#33A2FF;padding:1px">
+            <h4 style="color:#212F3D;text-align:center;">Sidebar</h4>
+            </div>
+            """
+            st.markdown(html_temp,unsafe_allow_html=True)
 
 
         explorationwrite_up = """
@@ -57,11 +73,19 @@ def main():
     elif option == 'Data Visualization':
         st.title('Data Visualization')
         html_temp = """
-        <div style="background-color:#E31C3C;padding:1px">
+        <div style="background-color:#33A2FF;padding:1px">
         <h3 style="color:#212F3D;text-align:center;">Data Visualization</h3>
         </div>
         """
         st.markdown(html_temp,unsafe_allow_html=True)
+
+        if st.sidebar.checkbox('Sidebar'):
+            html_temp = """
+            <div style="background-color:#33A2FF;padding:1px">
+            <h4 style="color:#212F3D;text-align:center;">Sidebar</h4>
+            </div>
+            """
+            st.markdown(html_temp,unsafe_allow_html=True)
 
 
         vizwrite_up = """
@@ -79,11 +103,19 @@ def main():
     elif option == 'Total Nitrogen Model':
         st.title('Total Nitrogen Model')
         html_temp = """
-        <div style="background-color:#E31C3C;padding:1px">
+        <div style="background-color:#33A2FF;padding:1px">
         <h3 style="color:#212F3D;text-align:center;">Total Nitrogen Model</h3>
         </div>
         """
         st.markdown(html_temp,unsafe_allow_html=True)
+
+        if st.sidebar.checkbox('Sidebar'):
+            html_temp = """
+            <div style="background-color:#33A2FF;padding:1px">
+            <h4 style="color:#212F3D;text-align:center;">Sidebar</h4>
+            </div>
+            """
+            st.markdown(html_temp,unsafe_allow_html=True)
 
 
         modelwrite_up = """
