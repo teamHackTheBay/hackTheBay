@@ -58,7 +58,7 @@ Nitrogen Oxide Data was collected through here:
 
 ## Original Data and merging it with landcover, air quality and nitrogen oxide. 
 
-Main steps of in data Augmentation:
+Steps of Collected the Data: 
 
      Splitting the data in half
      Combining single image data to split data
@@ -71,21 +71,32 @@ Main steps of in data Augmentation:
 
 
 * [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
+* [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
+* [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
 
 
 ## Data Visualization and Findings
 
-Visualization of Feature Map/Activation Map of images using VGG16 convolutional neural network
+Visualization of the Chemicals:
 
      Further from input the less details we can see.
+     
 
+* [Feature Map](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/feature_map.ipynb)
+
+Visualization of Location:
+
+     Further from input the less details we can see.
+     
 * [Feature Map](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/feature_map.ipynb)
 
 ## Modeling 
 
+Shap file here 
+
 <img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/mhxx.gif" width="480"></img>
 
-Quick Visualization of image data using a DCGAN requires minimal computing power.
+Feature Importances and Hyperparameters used. 
 
        Generator uses Conv2DTranspose
        Discriminator uses Conv2D
@@ -100,12 +111,20 @@ Quick Visualization of image data using a DCGAN requires minimal computing power
 
 ## Future Models to Consider 
 
-Best way to measure a GAN still is to look at fake images generated however there are quantitative measures.  Such as Frechet Inception Distance, Inception Score and Perceptual Path Length.
+<img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/mhxx.gif" width="480"></img>
 
-       FID measures the normal distribution distance between the real and fake images.  
-       The closer the distance, the lower the score the better the image quality and diversity
+Feature Importances and Hyperparameters used. 
 
-* [Frechet Inception Distance](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/frechet_inception_distance.ipynb)
+       Generator uses Conv2DTranspose
+       Discriminator uses Conv2D
+       Hyperparameters:
+          Filter
+          kernel_size
+          Stride
+          Padding
+          kernel_initializer
+
+* [Deep Convolutional GAN](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/dcgan_mhxx.ipynb)
 
 
 
