@@ -16,7 +16,7 @@ MHXX armor data was collected through a fans website.  It contained 1083 images.
 
 http://mhxx-soubigazou.info
 
-**Goal is to create a model that can generate images based on old assets by the studio or company and thus create future assets faster and at a lower cost**
+**The goal of the model was to try to see what features and how it was affected **
 
 ### Computer Requirements/Libraries/Modules
 
