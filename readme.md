@@ -8,60 +8,55 @@
 
 This project was a team project that looked at land features, air quality and nitrogen oxide and its affect on the Chesapeake bay.  
 
-Anime face data was collected through Kaggle. It contained 85000 images
+The water quality data was collected from the hackathon github repo:
 
 https://www.kaggle.com/splcher/animefacedataset
 
-MHXX armor data was collected through a fans website.  It contained 1083 images. After Augmentation became 19437.
+Landcover was collected through here:
 
 http://mhxx-soubigazou.info
 
+Air quality data was collected through here:
+
+Nitrogen Oxide Data was collected through here:
+
 **The goal of the model was to try to see what features and how it was affected **
 
-### Computer Requirements/Libraries/Modules
+### Libraries Used for the Hackathon
 
-Need to install the following
 
 <table>
 
 <tr>
-  <td>Computer Requirements</td>
+  <td>Original Data Collection</td>
   <td>Nvidia GPU 11 gb and above, tensorflow-gpu 1.1.5, cuda 10.0, cuDNN 7.5, tensorrt 5.6.5</td>
 </tr>
 
 <tr>
-  <td>Image Data Cleaning and Augmentation</td>
+  <td>Data Collection from other Sources</td>
   <td>numpy, os, cv2, glob, pandas, PIL, scipy, imageio, keras, augmentor, fastai</td>
 </tr>
 
 <tr>
-  <td>Feature Map Exploration</td>
+  <td>Data Visualization</td>
   <td>keras.applications.vgg16, keras.preprocessing.image, matplotlib, numpy</td>
 </tr>
 
 <tr>
-  <td>Deep Convolutional Generative Adversarial Networks</td>
+  <td>Modeling</td>
   <td>numpy, os, glob, imageio, time, PIL, keras, matplotlib</td>
 </tr>
 
 <tr>
-  <td>Frechet Inception Distance</td>
+  <td>Future Model</td>
   <td>numpy, scipy, keras, skimage.transform</td>
 </tr>
 
-<tr>
-  <td>Style GAN (You will have to go to NVIDIA to download Style GAN and place this file inside it)</td>
-  <td>numpy, tensorflow, dnnlib, config, train, training, copy, metrics</td>
-</tr>
-
-<tr>
-  <td>Image generator and movie clip</td>
-  <td>glob, numpy, moviepy, os, PIL, dnnlib, pickle</td>
 
 </table>
 
 
-## Image Data Cleaning and Augmentation
+## Original Data and merging it with landcover, air quality and nitrogen oxide. 
 
 Main steps of in data Augmentation:
 
@@ -78,7 +73,7 @@ Main steps of in data Augmentation:
 * [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
 
 
-## Feature Map Exploration
+## Data Visualization and Findings
 
 Visualization of Feature Map/Activation Map of images using VGG16 convolutional neural network
 
@@ -86,7 +81,7 @@ Visualization of Feature Map/Activation Map of images using VGG16 convolutional 
 
 * [Feature Map](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/feature_map.ipynb)
 
-## Deep Convolutional Generative Adversarial Network
+## Modeling 
 
 <img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/mhxx.gif" width="480"></img>
 
@@ -103,7 +98,7 @@ Quick Visualization of image data using a DCGAN requires minimal computing power
 
 * [Deep Convolutional GAN](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/dcgan_mhxx.ipynb)
 
-## Frechet Inception Distance
+## Future Models to Consider 
 
 Best way to measure a GAN still is to look at fake images generated however there are quantitative measures.  Such as Frechet Inception Distance, Inception Score and Perceptual Path Length.
 
@@ -112,48 +107,13 @@ Best way to measure a GAN still is to look at fake images generated however ther
 
 * [Frechet Inception Distance](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/frechet_inception_distance.ipynb)
 
-## StyleGAN
-
-You will need to download NVIDIA StyleGAN.  
-
-* [Nvidia StyleGAN](https://github.com/NVlabs/stylegan)
-
-Anime-face dataset was trained for 7 days using the default learning rate and mini batch repeat.  
-Need to set the data path for the tfrecords to the location of your tfrecords.  
-
-<img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/face_morph.gif" width="480"></img>
-
-For MHXX dataset transfer learning was used and learning rate was adjusted to 0.001 and mini batch repeat to 1.
-All adjustments were made inside the training/training_loop.py file.  You need to reference in the pickled model as well in resume_run_id and resume_kimg.    
-
-<img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/armor_morph.gif" width="480"></img>
-
-* [MHXX- StyleGAN](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_stylegan.ipynb)
-
-## Image Generation and Movie Clip
-
-To generate images and put them into an mp4 file.  
-    
-    Generates 1000 random images from pickled file
-    Can stitch together images and put them into an mp4 to see. 
-
-* [Image Generation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/img_generate.ipynb)
-
-<img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/vidstitch_image_071215_20200315.jpg" width="480"></img>
 
 
-## Author
+## Authors
 
 * Justin Huang
+* Tim Osburg
+* Jen Wu
+* Bryan Dickinson
+* Berenice Dethier
 
-## Resources
-
-* [Machine Learning Mastery](https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/)
-
-* [Deep Learning Illustrated](https://github.com/the-deep-learners/deep-learning-illustrated)
-
-* [DCGAN](https://towardsdatascience.com/generate-anime-style-face-using-dcgan-and-explore-its-latent-feature-representation-ae0e905f3974)
-
-* [Nvidia Style GAN](https://arxiv.org/abs/1812.04948)
-
-* [Anime Faces with Gwern](https://www.gwern.net/Faces)
