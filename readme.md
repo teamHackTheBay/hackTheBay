@@ -1,12 +1,12 @@
-<img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/fakes007560.png"></img>
+<img src="https://github.com/jvhuang1786/teamHackTheBay/hackTheBay/blob/master/images/landcoverimage.png"></img>
 
-# Generative Adversarial Networks Character Concept Creation
+# Analysis of Total Nitrogen Water Pollution Using Land and Air Data
 
-## Second Capstone Project For Springboard using neural networks to generate images
+## Team Hackathon Devpost Chesapeake Bay Water Quality Hackathon
 
 ## Introduction
 
-This project goes through 3 types of GAN. Vanilla GAN, Deep Convolutional GAN and Style GAN.
+This project was a team project that looked at land features, air quality and nitrogen oxide and its affect on the Chesapeake bay.  
 
 Anime face data was collected through Kaggle. It contained 85000 images
 
