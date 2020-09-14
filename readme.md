@@ -130,9 +130,18 @@ Feature Importances and Hyperparameters used.
 
 ## Authors
 
-* Justin Huang
-* Tim Osburg
-* Jen Wu
-* Bryan Dickinson
 * Berenice Dethier
+  Science, travel, and food enthusiast
+  [GitHub: berenice-d](https://github.com/berenice-d)
+* Bryan Dickinson
+  [GitHub: bryan-md](https://github.com/bryan-md)
+* Justin Huang
+  Into anime, finance computer vision, and NLP.
+  [GitHub: Jvhuang1786](https://jvhuang1786.github.io/)
+* Tim Osburg
+  Geophysicist and avid runner.
+  [GitHub: Tosburg](github.com/Tosburg)
+* Jen Wu
+  Entrepreneur and nature nerd.
+  [GitHub: Jenxwu](https://github.com/Jenxwu) (edited) 
 
