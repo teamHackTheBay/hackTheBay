@@ -90,18 +90,26 @@ Steps of Collected the Data:
 
 Visualization of the Chemicals:
 
+Scatter plot Dissolved Oxygen and Chlorophyll-A
+
   <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/DO_Active_Chlorophyll.png" width="480"></img>
+  
+Scatter plot Total Nitrogen and Phosphorus
 
   <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/Nitrogen_Phosphorus.png" width="480"></img>
 
+Scatter plot Suspended Solids and Turbidity 
+
   <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/Suspended_Solids_Turbidity.png" width="480"></img>
+  
+Distribution of PH, Salinity and Water Temperature 
 
   <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/pH_Temp_Salinity.png" width="480"></img>
-
-
-     Further from input the less details we can see.
+  
+Temperature Map in regards to Cheseapeake Bay 
+  
+  <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/temp.gif" width="480"></img>
      
-
 * [Chemical Visualization Notebook](https://github.com/teamHackTheBay/hackTheBay/blob/master/images/dfnitro_figures_2.ipynb)
 
     **Visualization of Location:**
