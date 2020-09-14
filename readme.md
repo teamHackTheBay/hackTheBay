@@ -10,15 +10,19 @@ This project was a team project that looked at land features, air quality and ni
 
 The water quality data was collected from the hackathon github repo:
 
-https://www.kaggle.com/splcher/animefacedataset
+https://drive.google.com/file/d/12uoFlcn8pgeuxD2-seFak36KTvrFPKCt/view
 
 Landcover was collected through here:
 
-http://mhxx-soubigazou.info
+https://www.mrlc.gov/viewer/
 
 Air quality data was collected through here:
 
+https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/north-american-regional-reanalysis-narr
+
 Nitrogen Oxide Data was collected through here:
+
+https://echo.epa.gov/tools/data-downloads
 
 **The goal of the model was to try to see what features and how it was affected **
 
@@ -29,7 +33,7 @@ Nitrogen Oxide Data was collected through here:
 
 <tr>
   <td>Original Data Collection</td>
-  <td>Nvidia GPU 11 gb and above, tensorflow-gpu 1.1.5, cuda 10.0, cuDNN 7.5, tensorrt 5.6.5</td>
+  <td>pandas, matplotlib, numpy regex</td>
 </tr>
 
 <tr>
