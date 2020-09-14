@@ -241,7 +241,7 @@ Root Mean Square Error: 0.6153584991792396
           * NO2 emissions from point sources
           * humidity
           * mean value of air NO2 and the year
-          * The second group's top features aside from the mean encoding feature:
+      * The second group's top features aside from the mean encoding feature:
           * lc_82(ratio of land that is 'cultivated crops')
           * distance from the bay
           * mean value of air NO2
@@ -264,7 +264,7 @@ Root Mean Square Error: 0.6153584991792396
   Science, travel, and food enthusiast
   [GitHub: berenice-d](https://github.com/berenice-d)
 * Bryan Dickinson
-  Curious. Addicted to Coffee
+  Curious. Addicted to Coffee.
   [GitHub: bryan-md](https://github.com/bryan-md)
 * Justin Huang
   Into anime, finance computer vision, and NLP.
