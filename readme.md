@@ -154,6 +154,7 @@ params['xgbregressor__importance_type'] = ['weight', 'gain', 'cover', 'total_gai
 gridRF = RandomizedSearchCV(pipeline, params, cv = 5, n_jobs = -1, random_state = 0, n_iter = 30, scoring = 'r2')
 ```
 
+* [Notebook for chosen Xgboost model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/all_feature_model/no_huc_xgb/all_features_no_huc_corr_xgb_model.ipynb)
 
 **Catboost Shap**
 
@@ -161,17 +162,25 @@ gridRF = RandomizedSearchCV(pipeline, params, cv = 5, n_jobs = -1, random_state 
 
 *Feature Importances and Hyperparameters used.* 
 
-       Generator uses Conv2DTranspose
-       Discriminator uses Conv2D
-       Hyperparameters:
-          Filter
-          kernel_size
-          Stride
-          Padding
-          kernel_initializer
-          
+    In this notebook, we use the following variables for prediction: 
+       
+       * 'latitude', 'longitude', 'areaacres', 'za_mean', ('lc_21', 'lc_22', 'lc_23', 'lc_24') combined as lc_2t, 'lc_31', ('lc_41', 'lc_42', 'lc_43') combined as lc_4t, 'lc_52', 'lc_71', 'lc_81', 'lc_82', ('lc_90', 'lc_95') combined as lc_9t, month', 'year', 'week', 'dayofweek', 'hour', 'min', 'quarter', 'airtemp_narr', 'precip3_narr', 'humidity_narr', 'cl_cover_narr', 'sfc_runoff', 'windspeed_narr', 'wdirection_narr', 'precip24_narr', 'precip48_narr', 'of_dist', 'total Nitrogen Oxide in year', and 'date_delta'.
+       
+      * Date_delta is a numeric variable which capture the time in seconds from the latest record. 
+      
+      * We could not keep 'new_date' in a datetime format (not supported by Catboost). 
+      
+      * The reasoning behind creating date_delta is that other time variables (month, year, week, day of week and quarter) are categorical. 
+      
+      * They can capture a seasonal phenomenon (pollution from industry on weekdays for example) but not a trend over time.
 
-*Chosen Model and Reasoning* 
+      * We removed the following variables: 'new_date' (replaced by datedelta which is numeric), 'huc12', and 'huc12_enc'.
+
+      * The dependant variable (target) is the total nitrogen ('tn') in mg/L.
+      
+* [Notebook for Catboost model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/catboost/HackTheBay%20Catboost%20water_final%20dataset-no%20huc%20all%20features%20.ipynb)
+
+## Chosen Model and Reasoning 
 
      Generator uses Conv2DTranspose
      Discriminator uses Conv2D
@@ -183,10 +192,6 @@ gridRF = RandomizedSearchCV(pipeline, params, cv = 5, n_jobs = -1, random_state 
         kernel_initializer
 
 
-
-
-* [Notebook for chosen Xgboost model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/all_feature_model/no_huc_xgb/all_features_no_huc_corr_xgb_model.ipynb)
-* [Notebook for Catboost model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/catboost/HackTheBay%20Catboost%20water_final%20dataset-no%20huc%20all%20features%20.ipynb)
 
 
 ## Future Models to Consider 
