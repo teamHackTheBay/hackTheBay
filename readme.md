@@ -64,17 +64,17 @@ https://echo.epa.gov/tools/data-downloads
 
 Steps of Collected the Data: 
 
-     Total Nitrogen was first collected out of the water_final.csv from the hackathon repo.
-     Landcover was collected 
-     Narr air quality data was collected    
-     These features were merged together with the total nitrogen chemical choosing total nitrogen from the parameter feature in water_final.csv
-     Nitrogen oxide data and correlation was added into the csv. 
-     Since land coverage data was from 2016 we decided to use datapoints from 2016 to the end of 2019. 
-     A chemicals csv was also created to take a look at the relationship among chemicals in the water. 
+     * Total Nitrogen was first collected out of the water_final.csv from the hackathon repo.
+     * Landcover was collected 
+     * Narr air quality data was collected    
+     * These features were merged together with the total nitrogen chemical choosing total nitrogen from the parameter feature in water_final.csv
+     * Nitrogen oxide data and correlation was added into the csv. 
+     * Since land coverage data was from 2016 we decided to use datapoints from 2016 to the end of 2019. 
+     * A chemicals csv was also created to take a look at the relationship among chemicals in the water. 
 
-* [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
-* [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
-* [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
+* [Detailed Description of the Steps](https://github.com/teamHackTheBay/hackTheBay/blob/master/writeup-sections/data_acquisition_writeup.pdf)
+* [Final CSV using Landcover, airquality and nitrogen oxide](https://github.com/teamHackTheBay/hackTheBay/blob/master/data/final_water.csv)
+* [Chemical Comparison CSV](https://github.com/teamHackTheBay/hackTheBay/blob/master/images/dfnitro.csv)
 
 
 ## Data Visualization and Findings
@@ -84,7 +84,7 @@ Visualization of the Chemicals:
      Further from input the less details we can see.
      
 
-* [Feature Map](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/feature_map.ipynb)
+* [Chemical Visualization Notebook](https://github.com/teamHackTheBay/hackTheBay/blob/master/images/dfnitro_figures_2.ipynb)
 
 Visualization of Location:
 
@@ -109,7 +109,9 @@ Feature Importances and Hyperparameters used.
           Padding
           kernel_initializer
 
-* [Deep Convolutional GAN](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/dcgan_mhxx.ipynb)
+* [Notebook for chosen Xgboost model (https://github.com/teamHackTheBay/hackTheBay/blob/master/models/all_feature_model/no_huc_xgb/all_features_no_huc_corr_xgb_model.ipynb)
+* [Notebook for Catboost model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/catboost/HackTheBay%20Catboost%20water_final%20dataset-no%20huc%20all%20features%20.ipynb)
+
 
 ## Future Models to Consider 
 
