@@ -207,7 +207,9 @@ gridRF = RandomizedSearchCV(pipeline, params, cv = 5, n_jobs = -1, random_state 
   
       * Further segmentation or additional relevant features may help make more accurate predictions. 
       
-      * When looking at the feature importances side by side, the target mean encoding of the HUC12 feature is the most important feature for both models. This makes sense that the previous averages of TN within the HUC will help predict future TN readings, this feature helps capture the variability between HUC12 areas.
+      * When looking at the feature importances side by side, the target mean encoding of the HUC12 feature is the most important feature for both models. 
+      * This makes sense that the previous averages of TN within the HUC will help predict future TN readings, this feature helps capture the variability between HUC12 areas.
+      
       * The first group's top features asie from the mean encoding feature:
           * month
           * air temperature
@@ -221,7 +223,8 @@ gridRF = RandomizedSearchCV(pipeline, params, cv = 5, n_jobs = -1, random_state 
           * mean value of air NO2
           * rainfall in the past 24 hours
           
-      * This shows that there is a difference in the relationships of variables and TN sampled in the water. It would seem that Group 1's TN values rely upon seasonal fluctuations, weather, NO2 emissions (from correlated point sources) and air NO2 values(from point sources and nearby cities/non point sources). 
+      * This shows that there is a difference in the relationships of variables and TN sampled in the water. 
+      * It would seem that Group 1's TN values rely upon seasonal fluctuations, weather, NO2 emissions (from correlated point sources) and air NO2 values(from point sources and nearby cities/non point sources). 
       
       * This could mean that a focus on reducing TN from point sources and non-point sources would help reduce TN in the bay.
       * Group 2's TN values rely more upon how land cover is utilized, specifically crop land. Determining ways to mitigate cropland run off could help reduce TN.      
