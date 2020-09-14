@@ -195,16 +195,15 @@ gridRF = RandomizedSearchCV(pipeline, params, cv = 5, n_jobs = -1, random_state 
       * The higher the latitude the more total nitrogen this was similar to the feature of_distance
       * The lower the nitro oxide the lower the total nitrogen
       
-## Future Models to Consider 
+## A further model improvement 
+
+#### When working through the model we found that location mattered and would change the model significantly. 
+
 
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/distance_tn.png" width="480"></img>
 
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/Unknown-5.png" width="480"></img>
 
-
-
-  When working through the model we found that location mattered and would change the model significantly. 
-  
       * Further segmentation or additional relevant features may help make more accurate predictions. 
       
       * When looking at the feature importances side by side, the target mean encoding of the HUC12 feature is the most important feature for both models. 
