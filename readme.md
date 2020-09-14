@@ -125,13 +125,41 @@ Visualization of the Chemicals:
 
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/xgboostshap.png" width="480"></img>
 
+*Feature Importances and Hyperparameters used.* 
+
+Robust Scaler using knn imputer of two nearest neighbors with the following features:
+
+```python
+#robust scaler column transformer 
+ct = make_column_transformer(
+(knn_impute_scale1, ['areaacres', 'lc_21', 'lc_31', 'lc_41', 'lc_42', 'lc_43', 'lc_52',
+   'lc_71', 'lc_81', 'lc_82', 'lc_90', 'lc_95', 'year', 'week',
+   'airtemp_narr', 'precip3_narr', 'humidity_narr', 'cl_cover_narr',
+   'sfc_runoff', 'windspeed_narr', 'wdirection_narr', 'precip48_narr',
+   'of_dist', 'total Nitrogen Oxide in year']),
+remainder='passthrough')
+```
+
+Hyperparameter Tuning:
+
+```python
+#Set Parameters
+params = {}
+params['xgbregressor__max_depth'] = np.arange(3,11,1)
+params['xgbregressor__n_estimators'] = np.arange(0, 1000,10)
+params['xgbregressor__min_child_weight'] = np.arange(1,11,1)
+params['xgbregressor__importance_type'] = ['weight', 'gain', 'cover', 'total_gain', 'total_cover']
+
+#Grid for hypertuning
+gridRF = RandomizedSearchCV(pipeline, params, cv = 5, n_jobs = -1, random_state = 0, n_iter = 30, scoring = 'r2')
+```
+
 
 **Catboost Shap**
 
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/catboostshap.png"></img>
 
-
-Feature Importances and Hyperparameters used. 
+*Feature Importances and Hyperparameters used.* 
 
        Generator uses Conv2DTranspose
        Discriminator uses Conv2D
@@ -141,6 +169,21 @@ Feature Importances and Hyperparameters used.
           Stride
           Padding
           kernel_initializer
+          
+
+*Chosen Model and Reasoning* 
+
+     Generator uses Conv2DTranspose
+     Discriminator uses Conv2D
+     Hyperparameters:
+        Filter
+        kernel_size
+        Stride
+        Padding
+        kernel_initializer
+
+
+
 
 * [Notebook for chosen Xgboost model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/all_feature_model/no_huc_xgb/all_features_no_huc_corr_xgb_model.ipynb)
 * [Notebook for Catboost model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/catboost/HackTheBay%20Catboost%20water_final%20dataset-no%20huc%20all%20features%20.ipynb)
@@ -152,14 +195,7 @@ Feature Importances and Hyperparameters used.
 
 Feature Importances and Hyperparameters used. 
 
-       Generator uses Conv2DTranspose
-       Discriminator uses Conv2D
-       Hyperparameters:
-          Filter
-          kernel_size
-          Stride
-          Padding
-          kernel_initializer
+      Bryans Write up Section 
 
 * [Deep Convolutional GAN](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/dcgan_mhxx.ipynb)
 
