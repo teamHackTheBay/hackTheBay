@@ -1,4 +1,5 @@
-<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/hack.png"></img>
+[![Watch the video](https://github.com/teamHackTheBay/hackTheBay/blob/master/images/hack.png)](https://www.youtube.com/watch?v=kAa5iWRKkNc&feature=youtu.be)
+
 
 # Analysis of Total Nitrogen Water Pollution Using Land and Air Data
 
