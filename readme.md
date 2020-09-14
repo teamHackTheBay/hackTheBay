@@ -1,4 +1,4 @@
-<img src="https://github.com/jvhuang1786/teamHackTheBay/hackTheBay/blob/master/images/landcoverimage.png"></img>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/hack.png"></img>
 
 # Analysis of Total Nitrogen Water Pollution Using Land and Air Data
 
@@ -89,6 +89,15 @@ Steps of Collected the Data:
 ## Data Visualization and Findings
 
 Visualization of the Chemicals:
+
+  <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/DO_Active_Chlorophyll.png" width="480"></img>
+
+  <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/Nitrogen_Phosphorus.png" width="480"></img>
+
+  <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/Suspended_Solids_Turbidity.png" width="480"></img>
+
+  <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/pH_Temp_Salinity.png" width="480"></img>
+
 
      Further from input the less details we can see.
      
