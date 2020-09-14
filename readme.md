@@ -95,15 +95,23 @@ Visualization of the Chemicals:
 
 * [Chemical Visualization Notebook](https://github.com/teamHackTheBay/hackTheBay/blob/master/images/dfnitro_figures_2.ipynb)
 
-Visualization of Location:
-
-     Further from input the less details we can see.
+    **Visualization of Location:**
+    
+      * Visually from the sample locations that are highly correlated there seem to be many locations that align with Integration & Application Networks's most recent Chesapeake Bay Health (Total Nitrogen Threshold) Indicator Map (2013).
+      * There a clumps of sample locations that were correlated with nearby NO2 air monitoring stations that also showed fair to poor on the 2013 Indicator map, including the Upper Bay (Upper Western Shore, Upper Eastern Shore, Patapsco and Back Rivers), Patuxent River, and Potomac River.
+      * There mroe clusters of correlated sample locations further away from the bay, in New York, further up the Potomac and Susquehanna rivers.
+      * These also seem to be clustered around cities, such as York, Lancaster, Charlottesville and others.
+      * There does not seem to be many sites correlated with NO2 in the air in the Lower Easter Shore area of the Chesapeake Bay.
+      * Most in/near the open water of the bay is not correlated with NO2 values
+      * It appears, with the exception of New York, most of the sample locations that are near the open water of the bay are negatively correlated with the nearby monitoring station. And the positivly correlated sample sites are both near the open water of the bay and further away.
      
-* [Feature Map](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/feature_map.ipynb)
+* [Correlation analysis on Nitrogen Oxide and location with Total Nitrogen](https://github.com/teamHackTheBay/hackTheBay/blob/master/exploration/epa_no2_monitoring_data.ipynb)
 
 ## Modeling 
 
-Shap file here 
+**Xgboost Shap**
+
+**Catboost Shap**
 
 <img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/mhxx.gif" width="480"></img>
 
