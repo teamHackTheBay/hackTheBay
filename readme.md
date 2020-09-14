@@ -106,7 +106,7 @@ Distribution of PH, Salinity and Water Temperature
 
   <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/pH_Temp_Salinity.png" width="480"></img>
   
-Temperature Map in regards to Cheseapeake Bay 
+Temperature Map in regards to Chesapeake Bay 
   
   <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/temp.gif" width="480"></img>
      
@@ -117,13 +117,13 @@ Temperature Map in regards to Cheseapeake Bay
     <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/bryanloc.png" width="480"></img>
 
     
-      * Visually from the sample locations that are highly correlated there seem to be many locations that align with Integration & Application Networks's most recent Chesapeake Bay Health (Total Nitrogen Threshold) Indicator Map (2013).
+      * Visually from the sample locations that are highly correlated there seem to be many locations that align with Integration & Application Networks most recent Chesapeake Bay Health (Total Nitrogen Threshold) Indicator Map (2013).
       * There a clumps of sample locations that were correlated with nearby NO2 air monitoring stations that also showed fair to poor on the 2013 Indicator map, including the Upper Bay (Upper Western Shore, Upper Eastern Shore, Patapsco and Back Rivers), Patuxent River, and Potomac River.
-      * There mroe clusters of correlated sample locations further away from the bay, in New York, further up the Potomac and Susquehanna rivers.
+      * There more clusters of correlated sample locations further away from the bay, in New York, further up the Potomac and Susquehanna rivers.
       * These also seem to be clustered around cities, such as York, Lancaster, Charlottesville and others.
       * There does not seem to be many sites correlated with NO2 in the air in the Lower Easter Shore area of the Chesapeake Bay.
       * Most in/near the open water of the bay is not correlated with NO2 values
-      * It appears, with the exception of New York, most of the sample locations that are near the open water of the bay are negatively correlated with the nearby monitoring station. And the positivly correlated sample sites are both near the open water of the bay and further away.
+      * It appears, with the exception of New York, most of the sample locations that are near the open water of the bay are negatively correlated with the nearby monitoring station. And the positively correlated sample sites are both near the open water of the bay and further away.
      
 * [Correlation analysis on Nitrogen Oxide and location with Total Nitrogen](https://github.com/teamHackTheBay/hackTheBay/blob/master/exploration/epa_no2_monitoring_data.ipynb)
 
@@ -133,7 +133,7 @@ Temperature Map in regards to Cheseapeake Bay
 
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/xgboostshap.png" width="480"></img>
 
-*Feature Importances and Hyperparameters used.* 
+*Feature Importance and Hyperparameters used.* 
 
 Robust Scaler using knn imputer of two nearest neighbors with the following features:
 
@@ -158,7 +158,7 @@ params['xgbregressor__n_estimators'] = np.arange(0, 1000,10)
 params['xgbregressor__min_child_weight'] = np.arange(1,11,1)
 params['xgbregressor__importance_type'] = ['weight', 'gain', 'cover', 'total_gain', 'total_cover']
 
-#Grid for hypertuning
+#Grid for hyper tuning
 gridRF = RandomizedSearchCV(pipeline, params, cv = 5, n_jobs = -1, random_state = 0, n_iter = 30, scoring = 'r2')
 ```
 
@@ -184,13 +184,13 @@ gridRF = RandomizedSearchCV(pipeline, params, cv = 5, n_jobs = -1, random_state 
 
       * We removed the following variables: 'new_date' (replaced by datedelta which is numeric), 'huc12', and 'huc12_enc'.
 
-      * The dependant variable (target) is the total nitrogen ('tn') in mg/L.
+      * The dependent variable (target) is the total nitrogen ('tn') in mg/L.
       
 * [Notebook for Catboost model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/catboost/HackTheBay%20Catboost%20water_final%20dataset-no%20huc%20all%20features%20.ipynb)
 
 ## Chosen Model and Reasoning 
 
-     Catboost model did the best job of explaining total nitrogen across the Chesapeake bay.  
+     Catboost model did the best job of explaining total nitrogen across the Chesapeake Bay.  
       * More Farmland lc_82 the higher the total nitrogen
       * The higher the latitude the more total nitrogen this was similar to the feature of_distance
       * The lower the nitro oxide the lower the total nitrogen
@@ -231,28 +231,28 @@ Root Mean Square Error: 0.7460620539026832
 
       * Further segmentation or additional relevant features may help make more accurate predictions. 
       
-      * When looking at the feature importances side by side, the target mean encoding of the HUC12 feature is the most important feature for both models. 
+      * When looking at the feature importance side by side, the target mean-encoding of the HUC12 feature is the most important feature for both models. 
       * This makes sense that the previous averages of TN within the HUC will help predict future TN readings, this feature helps capture the variability between HUC12 areas.
       
-      * The first group's top features asie from the mean encoding feature:
+      * The first group's top features aside from the mean encoding feature:
           * month
           * air temperature
           * rainfall in the past 24 hours
           * NO2 emissions from point sources
           * humidity
           * mean value of air NO2 and the year
-          * The second group's top features aside form the mean encoding feature:
+          * The second group's top features aside from the mean encoding feature:
           * lc_82(ratio of land that is 'cultivated crops')
           * distance from the bay
           * mean value of air NO2
           * rainfall in the past 24 hours
           
       * This shows that there is a difference in the relationships of variables and TN sampled in the water. 
-      * It would seem that Group 1's TN values rely upon seasonal fluctuations, weather, NO2 emissions (from correlated point sources) and air NO2 values(from point sources and nearby cities/non point sources). 
+      * It would seem that Group 1's TN values rely upon seasonal fluctuations, weather, NO2 emissions (from correlated point sources) and air NO2 values (from point sources and nearby cities/non-point sources). 
       
       * This could mean that a focus on reducing TN from point sources and non-point sources would help reduce TN in the bay.
       * Group 2's TN values rely more upon how land cover is utilized, specifically crop land. Determining ways to mitigate cropland run off could help reduce TN.      
-      * An explanation for 'distance to the outflow of the bay' being such an important feature, is that there is less water for the pollutant to be dilluted in the further from the bay you are, making run off TN values
+      * An explanation for 'distance to the outflow of the bay' being such an important feature, is that there is less water for the pollutant to be diluted in the further from the bay you are, making run off TN values
 
 * [Segmented by Area Model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/notebook/segmented_models.ipynb)
 
@@ -274,4 +274,6 @@ Root Mean Square Error: 0.7460620539026832
 * Jen Wu
   Entrepreneur and nature nerd.
   [GitHub: Jenxwu](https://github.com/Jenxwu) 
+
+
 
