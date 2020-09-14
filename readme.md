@@ -97,6 +97,9 @@ Visualization of the Chemicals:
 
     **Visualization of Location:**
     
+    <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/bryanloc.png" width="480"></img>
+
+    
       * Visually from the sample locations that are highly correlated there seem to be many locations that align with Integration & Application Networks's most recent Chesapeake Bay Health (Total Nitrogen Threshold) Indicator Map (2013).
       * There a clumps of sample locations that were correlated with nearby NO2 air monitoring stations that also showed fair to poor on the 2013 Indicator map, including the Upper Bay (Upper Western Shore, Upper Eastern Shore, Patapsco and Back Rivers), Patuxent River, and Potomac River.
       * There mroe clusters of correlated sample locations further away from the bay, in New York, further up the Potomac and Susquehanna rivers.
@@ -111,9 +114,13 @@ Visualization of the Chemicals:
 
 **Xgboost Shap**
 
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/xgboostshap.png" width="480"></img>
+
+
 **Catboost Shap**
 
-<img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/mhxx.gif" width="480"></img>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/catboostshap.png"></img>
+
 
 Feature Importances and Hyperparameters used. 
 
