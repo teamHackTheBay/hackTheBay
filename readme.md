@@ -38,22 +38,22 @@ https://echo.epa.gov/tools/data-downloads
 
 <tr>
   <td>Data Collection from other Sources</td>
-  <td>numpy, os, cv2, glob, pandas, PIL, scipy, imageio, keras, augmentor, fastai</td>
+  <td>pandas, geopy, numpy, seaborn, sklearn, geopandas, certify, urllib3, scipy.spatial</td>
 </tr>
 
 <tr>
   <td>Data Visualization</td>
-  <td>keras.applications.vgg16, keras.preprocessing.image, matplotlib, numpy</td>
+  <td>plotly, seaborn, matplotlib</td>
 </tr>
 
 <tr>
   <td>Modeling</td>
-  <td>numpy, os, glob, imageio, time, PIL, keras, matplotlib</td>
+  <td>catboost, randomforest from sklearn, xgboost, shap</td>
 </tr>
 
 <tr>
   <td>Future Model</td>
-  <td>numpy, scipy, keras, skimage.transform</td>
+  <td>sklearn random forest, shap</td>
 </tr>
 
 
@@ -64,15 +64,13 @@ https://echo.epa.gov/tools/data-downloads
 
 Steps of Collected the Data: 
 
-     Splitting the data in half
-     Combining single image data to split data
-     Mirroring the image data    
-     Adjusting the brightness of the image data     
-     Photoshop increase image resolution
-     Resize the image to 512 x 512 and 256 x 256
-     Run through fastai
-     Use dataset_tool.py from Nvidia to transform to tfrecords
-
+     Total Nitrogen was first collected out of the water_final.csv from the hackathon repo.
+     Landcover was collected 
+     Narr air quality data was collected    
+     These features were merged together with the total nitrogen chemical choosing total nitrogen from the parameter feature in water_final.csv
+     Nitrogen oxide data and correlation was added into the csv. 
+     Since land coverage data was from 2016 we decided to use datapoints from 2016 to the end of 2019. 
+     A chemicals csv was also created to take a look at the relationship among chemicals in the water. 
 
 * [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
 * [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
