@@ -24,7 +24,7 @@ Nitrogen Oxide Data was collected through here:
 
 https://echo.epa.gov/tools/data-downloads
 
-**The goal of the model was to try to see what features and how it was affected **
+** The goal of the model was to try to see what features and how it was affected **
 
 ### Libraries Used for the Hackathon
 
