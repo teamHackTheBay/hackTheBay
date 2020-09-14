@@ -211,23 +211,23 @@ print(np.sqrt(mean_squared_error(y_test, y_pred)))
       
 ## A further model improvement 
 
-#### When working through the model we found that location mattered and would change the model significantly. 
+#### During data analysis we found that feature relationships with TN varied within the watershed. 
 
 ```python
+Ensemble Model Evaluation Metrics
+Mean Squared Error: 0.37866608251212613
+Root Mean Square Error: 0.6153584991792396
 
-Evaluation Metrics
-Explained Variance: 0.9007144288762047
-r2: 0.9005654073704523
-Mean Squared Error: 0.5566085882734902
-Root Mean Square Error: 0.7460620539026832
-95% Confidence Interval: [0.47191528 0.94367004] mg/L
 
 ```
 
 
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/distance_tn.png" width="480"></img>
 
-<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/Unknown-5.png" width="480"></img>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi_model1.png" width="480"></img>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/model1_shapsum.png" width="480"></img>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi_model2.png" width="480"></img>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/model2_shapsum.png" width="480"></img>
 
       * Further segmentation or additional relevant features may help make more accurate predictions. 
       
@@ -254,7 +254,7 @@ Root Mean Square Error: 0.7460620539026832
       * Group 2's TN values rely more upon how land cover is utilized, specifically crop land. Determining ways to mitigate cropland run off could help reduce TN.      
       * An explanation for 'distance to the outflow of the bay' being such an important feature, is that there is less water for the pollutant to be diluted in the further from the bay you are, making run off TN values
 
-* [Segmented by Area Model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/notebook/segmented_models.ipynb)
+* [Ensemble Model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/notebook/ensemble_model.ipynb)
 
 
 
@@ -264,6 +264,7 @@ Root Mean Square Error: 0.7460620539026832
   Science, travel, and food enthusiast
   [GitHub: berenice-d](https://github.com/berenice-d)
 * Bryan Dickinson
+  Curious. Addicted to Coffee
   [GitHub: bryan-md](https://github.com/bryan-md)
 * Justin Huang
   Into anime, finance computer vision, and NLP.
