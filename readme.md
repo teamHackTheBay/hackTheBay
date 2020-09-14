@@ -88,7 +88,7 @@ Steps of Collected the Data:
 
 ## Data Visualization and Findings
 
-Visualization of the Chemicals:
+**Visualization of the Chemicals:**
 
 Scatter plot Dissolved Oxygen and Chlorophyll-A
 
@@ -190,27 +190,44 @@ gridRF = RandomizedSearchCV(pipeline, params, cv = 5, n_jobs = -1, random_state 
 
 ## Chosen Model and Reasoning 
 
-     Generator uses Conv2DTranspose
-     Discriminator uses Conv2D
-     Hyperparameters:
-        Filter
-        kernel_size
-        Stride
-        Padding
-        kernel_initializer
-
-
-
-
+     Catboost model did the best job of explaining total nitrogen across the Chesapeake bay.  
+      * More Farmland lc_82 the higher the total nitrogen
+      * The higher the latitude the more total nitrogen this was similar to the feature of_distance
+      * The lower the nitro oxide the lower the total nitrogen
+      
 ## Future Models to Consider 
 
-<img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/mhxx.gif" width="480"></img>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/distance_tn.png" width="480"></img>
 
-Feature Importances and Hyperparameters used. 
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/images/Unknown-5.png" width="480"></img>
 
-      Bryans Write up Section 
 
-* [Deep Convolutional GAN](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/dcgan_mhxx.ipynb)
+
+  When working through the model we found that location mattered and would change the model significantly. 
+  
+      * Further segmentation or additional relevant features may help make more accurate predictions. 
+      
+      * When looking at the feature importances side by side, the target mean encoding of the HUC12 feature is the most important feature for both models. This makes sense that the previous averages of TN within the HUC will help predict future TN readings, this feature helps capture the variability between HUC12 areas.
+      * The first group's top features asie from the mean encoding feature:
+          * month
+          * air temperature
+          * rainfall in the past 24 hours
+          * NO2 emissions from point sources
+          * humidity
+          * mean value of air NO2 and the year
+          * The second group's top features aside form the mean encoding feature:
+          * lc_82(ratio of land that is 'cultivated crops')
+          * distance from the bay
+          * mean value of air NO2
+          * rainfall in the past 24 hours
+          
+      * This shows that there is a difference in the relationships of variables and TN sampled in the water. It would seem that Group 1's TN values rely upon seasonal fluctuations, weather, NO2 emissions (from correlated point sources) and air NO2 values(from point sources and nearby cities/non point sources). 
+      
+      * This could mean that a focus on reducing TN from point sources and non-point sources would help reduce TN in the bay.
+      * Group 2's TN values rely more upon how land cover is utilized, specifically crop land. Determining ways to mitigate cropland run off could help reduce TN.      
+      * An explanation for 'distance to the outflow of the bay' being such an important feature, is that there is less water for the pollutant to be dilluted in the further from the bay you are, making run off TN values
+
+* [Segmented by Area Model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/notebook/segmented_models.ipynb)
 
 
 
