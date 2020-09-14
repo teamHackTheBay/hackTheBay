@@ -195,9 +195,34 @@ gridRF = RandomizedSearchCV(pipeline, params, cv = 5, n_jobs = -1, random_state 
       * The higher the latitude the more total nitrogen this was similar to the feature of_distance
       * The lower the nitro oxide the lower the total nitrogen
       
+```python
+#R Squared
+print(r2_score(y_test, y_pred))
+0.8401995362308845
+
+#Explained Variance Score
+print(explained_variance_score(y_test, y_pred))
+0.8402718767819098
+
+#Root Mean Squared Error
+print(np.sqrt(mean_squared_error(y_test, y_pred)))
+0.9249663789834368
+```
+      
 ## A further model improvement 
 
 #### When working through the model we found that location mattered and would change the model significantly. 
+
+```python
+
+Evaluation Metrics
+Explained Variance: 0.9007144288762047
+r2: 0.9005654073704523
+Mean Squared Error: 0.5566085882734902
+Root Mean Square Error: 0.7460620539026832
+95% Confidence Interval: [0.47191528 0.94367004] mg/L
+
+```
 
 
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/distance_tn.png" width="480"></img>
