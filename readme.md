@@ -248,5 +248,5 @@ gridRF = RandomizedSearchCV(pipeline, params, cv = 5, n_jobs = -1, random_state 
   [GitHub: Tosburg](github.com/Tosburg)
 * Jen Wu
   Entrepreneur and nature nerd.
-  [GitHub: Jenxwu](https://github.com/Jenxwu) (edited) 
+  [GitHub: Jenxwu](https://github.com/Jenxwu) 
 
