@@ -72,9 +72,18 @@ Steps of Collected the Data:
      * Since land coverage data was from 2016 we decided to use datapoints from 2016 to the end of 2019. 
      * A chemicals csv was also created to take a look at the relationship among chemicals in the water. 
 
+**CSV Files and data collection write up**
 * [Detailed Description of the Steps](https://github.com/teamHackTheBay/hackTheBay/blob/master/writeup-sections/data_acquisition_writeup.pdf)
 * [Final CSV using Landcover, airquality and nitrogen oxide](https://github.com/teamHackTheBay/hackTheBay/blob/master/data/final_water.csv)
 * [Chemical Comparison CSV](https://github.com/teamHackTheBay/hackTheBay/blob/master/images/dfnitro.csv)
+
+**Feature engineering and merging**
+* [Adding of Distance Feature](https://github.com/teamHackTheBay/hackTheBay/blob/master/feature_engineering/add_distance_feat.ipynb)
+* [Adding huc12_enc Feature](https://github.com/teamHackTheBay/hackTheBay/blob/master/feature_engineering/huc_mean_target.ipynb)
+* [Importing Narr Data](https://github.com/teamHackTheBay/hackTheBay/blob/master/exploration/narr_import.ipynb)
+* [Joining LandCover and Narr with hackthebay csv](https://github.com/teamHackTheBay/hackTheBay/blob/master/exploration/htb_lc_data_join.ipynb)
+* [Gathering Nitro Oxide data](https://github.com/teamHackTheBay/hackTheBay/blob/master/exploration/epa_no2_monitoring_data.ipynb)
+* [Combining new features with Total Nitrogen](https://github.com/teamHackTheBay/hackTheBay/blob/master/exploration/adding_nitro_oxide.ipynb)
 
 
 ## Data Visualization and Findings
@@ -109,7 +118,7 @@ Feature Importances and Hyperparameters used.
           Padding
           kernel_initializer
 
-* [Notebook for chosen Xgboost model (https://github.com/teamHackTheBay/hackTheBay/blob/master/models/all_feature_model/no_huc_xgb/all_features_no_huc_corr_xgb_model.ipynb)
+* [Notebook for chosen Xgboost model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/all_feature_model/no_huc_xgb/all_features_no_huc_corr_xgb_model.ipynb)
 * [Notebook for Catboost model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/catboost/HackTheBay%20Catboost%20water_final%20dataset-no%20huc%20all%20features%20.ipynb)
 
 
