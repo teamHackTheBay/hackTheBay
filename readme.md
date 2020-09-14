@@ -1,5 +1,5 @@
-[![Watch the video](https://github.com/teamHackTheBay/hackTheBay/blob/master/images/hack.png)](https://www.youtube.com/watch?v=kAa5iWRKkNc&feature=youtu.be)
-
+[![Watch the hackthebay submission](https://github.com/teamHackTheBay/hackTheBay/blob/master/images/hack.png)](https://www.youtube.com/watch?v=kAa5iWRKkNc&feature=youtu.be)
+### Click on the image to watch the video presentation on youtube.
 
 # Analysis of Total Nitrogen Water Pollution Using Land and Air Data
 
