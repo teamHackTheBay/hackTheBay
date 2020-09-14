@@ -222,8 +222,8 @@ Root Mean Square Error: 0.6153584991792396
 ```
 
 
-<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/distance_tn.png" width="480"></img>
-
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/distance_tn.png" width="450"></img>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/indicator.png" width="450"></img>
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi_model1.png" width="450"></img>
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/model1_shapsum.png" width="450"></img>
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi_model2.png" width="450"></img>
