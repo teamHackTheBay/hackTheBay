@@ -269,10 +269,10 @@ Mean Abs. % Error: 19.917
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi2_model2.PNG" width="450"></img>
 While there is an observed improvement from the XGBoost or Catboost model, there is still room for improvement, as the mean % absolute error is ~20%. Plotting these will reveal that the residuals are larger for larger values of TN.
 
-For the model with observations of larger TN and further from the mouth of the bay one of the most important features is *lc_82* which corresponds to 'cultivated crops', however this doesn't give the best indication of which crops are impacting TN in the watershed. You can see in the difference between SHAP plots of the Catboost model that indicate a higher % of an HUC area leads to higher TN values, and the hurdle ensemble model that show higher percent area of HUC lead to lower TN values. There are more than 70 categories of crops in the Chesapeake Bay watershed, the most in terms of acreage being hay, corn & soybeans for 2019. These crops may impact TN in the watershed differently, as they have different nitrogen updatakes. 
+For the model with observations of larger TN and further from the mouth of the bay one of the most important features is *lc_82* which corresponds to 'cultivated crops', however this doesn't give the best indication of which crops are impacting TN in the watershed. You can see in the difference between SHAP plots of the Catboost model that indicate a higher % of an HUC area leads to higher TN values, and the hurdle ensemble model that show higher percent area of HUC lead to lower TN values. There are more than 70 categories of crops in the Chesapeake Bay watershed, the most in terms of acreage being hay, corn & soybeans for 2019. These crops may impact TN in the watershed differently, as they have different nitrogen updatakes.  <br/>
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_capture_ws.PNG" title="Land Cover Category Acreage in the Watershed" alt="https://nassgeodata.gmu.edu/CropScape/"></img>
 
-**Utilizing crop features**
+**Utilizing crop features** <br>
 Lastly, a model was built for portion of observations that had a high TN. The land cover features from all previous models were replaced with land use data describing the type of crop, along with previous categories (developed land, forest etc.) yearly from 2015-2019. These values were not normalized per observation, equating to roughly 1 value (or pixel value) equates to 30 meters or land cover type<sup>1</sup>.
 
 The data was obtained from USDA's Cropscape.
@@ -290,11 +290,11 @@ Mean Squared Error: 0.97
 Root Mean Square Error: 0.98
 Mean Abs. % Error: xx
 ```
-[insert rf importance image]
-[insert p importance image]
-[insert shap image]
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_perm_importance.PNG" width="450"></img>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_rf_importance.PNG" width="450"></img>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_shap.PNG"></img>
 
-This model, while it has a higher rmse of .98 from .58, it gives some insight into how crops impact TN. 
+This model, while it has a higher rmse of **.98** from **.58**, it gives some insight into how crops impact TN. 
 
 When looking at the feature importances from these plots, it appears the top 5 important features are:
 * Double Crop barley/soybeans
@@ -309,7 +309,7 @@ Clovers, double crops of barley/soybeans and corn seem to have the highest impac
 
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_corr.PNG" title="Top Correlated Features with TN"></img>
 
-**More study is needed**
+**More study is needed** <br>
 The above importance features showcase the complexity of this problem. For example, an interesting crop shown above as impactful is 'clover'.  Clovers <sup>4</sup>(and alfalfa<sup>5</sup>) can be utilized to increase the soil's nitrogen levels, taken from the air. So while it may look like it would be beneficial to not plant clovers because it leads to an increase in TN in the tributaries, it could have an overall positive effect on the environment<sup>5</sup>.  
 Another interesting observation, from the plots above, it shows that wetlands (*lc_90*, *lc_95*, *lc_9t*) show a somewhat inverse correlation to TN. However alfalfa needs dry roots to be effective, alfalfa grown in wetlands will not be as affective in fixating nitrogen<sup>6</sup>. 
 
