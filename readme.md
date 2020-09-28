@@ -257,7 +257,7 @@ Root Mean Square Error: 0.6153584991792396
 
 * [Random Forest Ensemble Model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/notebook/ensemble_model.ipynb)
 
-**Improving the above model when it comes to scalability.**
+**Improving the above model when it comes to scalability.** <br>
 The above model requires HUC12 boundary's history of Total Nitrogen samples. We could use a global mean for that portion of the data, however, the model can be even more improved by removing this mean encoded feature. When removing this feature the model improves.
 ```python
 Ensemble Model Evaluation Metrics
@@ -282,7 +282,7 @@ The data was obtained from USDA's Cropscape.
 >https://www.nass.usda.gov/Research_and_Science/Cropland/sarsfaqs2.php
 
 
- Distance feature was also removed. This model will predict an HUC12 boundary with area of crops, weather data, nearby NO2 monitoring data, and emissions from correlated NO2 emissions from point source locations within the airshed. 
+ Distance feature was also removed. This model will predict TN of a HUC12 boundary with area of crops, weather data, nearby NO2 monitoring data, and emissions from correlated NO2 emissions from point source locations within the airshed. 
 
 ```python
 Model Evaluation Metrics
@@ -290,9 +290,9 @@ Mean Squared Error: 0.97
 Root Mean Square Error: 0.98
 Mean Abs. % Error: xx
 ```
-<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_perm_importance.PNG" width="450"></img>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_perm_importance.PNG"></img>
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_rf_importance.PNG" width="450"></img>
-<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_shap.PNG"></img>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_shap.PNG" width="450"></img>
 
 This model, while it has a higher rmse of **.98** from **.58**, it gives some insight into how crops impact TN. 
 
@@ -321,14 +321,14 @@ Another interesting observation, from the plots above, it shows that wetlands (*
 
 
 
-<sup>1</sup>https://www.nass.usda.gov/Research_and_Science/Cropland/docs/MuellerICASVI_CDL.pdf
-<sup>2</sup>https://emergence.fbn.com/agronomy/how-much-nitrogen-does-your-corn-need
-<sup>3</sup> https://agfax.com/2014/01/02/adding-nitrogen-soybeans-can-improve-yields/
-<sup>4</sup>http://www.midwestforage.org/pdf/61.pdf.pdf
-<sup>5</sup>https://www.uaex.edu/publications/pdf/FSA-2160.pdf
-<sup>6</sup>https://ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=10478
-<sup>7</sup>https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013WR014372
-<sup>8</sup>https://ian.umces.edu/ecocheck/report-cards/chesapeake-bay/2012/indicators/total_nitrogen/#_Data_Map
+<sup>1</sup>https://www.nass.usda.gov/Research_and_Science/Cropland/docs/MuellerICASVI_CDL.pdf <br>
+<sup>2</sup>https://emergence.fbn.com/agronomy/how-much-nitrogen-does-your-corn-need <br>
+<sup>3</sup> https://agfax.com/2014/01/02/adding-nitrogen-soybeans-can-improve-yields/ <br>
+<sup>4</sup>http://www.midwestforage.org/pdf/61.pdf.pdf <br>
+<sup>5</sup>https://www.uaex.edu/publications/pdf/FSA-2160.pdf <br>
+<sup>6</sup>https://ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=10478 <br>
+<sup>7</sup>https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013WR014372 <br>
+<sup>8</sup>https://ian.umces.edu/ecocheck/report-cards/chesapeake-bay/2012/indicators/total_nitrogen/#_Data_Map <br>
 ## Authors
 
 * Berenice Dethier
