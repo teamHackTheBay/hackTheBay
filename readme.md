@@ -257,8 +257,78 @@ Root Mean Square Error: 0.6153584991792396
 
 * [Random Forest Ensemble Model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/notebook/ensemble_model.ipynb)
 
+**Improving the above model when it comes to scalability.**
+The above model requires HUC12 boundary's history of Total Nitrogen samples. We could use a global mean for that portion of the data, however, the model can be even more improved by removing this mean encoded feature. When removing this feature the model improves.
+```python
+Ensemble Model Evaluation Metrics
+Mean Squared Error: 0.340
+Root Mean Square Error: 0.583
+Mean Abs. % Error: 19.917
+```
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi2_model1.PNG" width="450"></img>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi2_model2.PNG" width="450"></img>
+While there is an observed improvement from the XGBoost or Catboost model, there is still room for improvement, as the mean % absolute error is ~20%. Plotting these will reveal that the residuals are larger for larger values of TN.
+
+For the model with observations of larger TN and further from the mouth of the bay one of the most important features is *lc_82* which corresponds to 'cultivated crops', however this doesn't give the best indication of which crops are impacting TN in the watershed. You can see in the difference between SHAP plots of the Catboost model that indicate a higher % of an HUC area leads to higher TN values, and the hurdle ensemble model that show higher percent area of HUC lead to lower TN values. There are more than 70 categories of crops in the Chesapeake Bay watershed, the most in terms of acreage being hay, corn & soybeans for 2019. These crops may impact TN in the watershed differently, as they have different nitrogen updatakes. 
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_capture_ws.PNG" title="Land Cover Category Acreage in the Watershed" alt="https://nassgeodata.gmu.edu/CropScape/"></img>
+
+**Utilizing crop features**
+Lastly, a model was built for portion of observations that had a high TN. The land cover features from all previous models were replaced with land use data describing the type of crop, along with previous categories (developed land, forest etc.) yearly from 2015-2019. These values were not normalized per observation, equating to roughly 1 value (or pixel value) equates to 30 meters or land cover type<sup>1</sup>.
+
+The data was obtained from USDA's Cropscape.
+> **What data is hosted on the CropScape website?**
+
+>The geospatial data product called the Cropland Data Layer (CDL) is hosted on CropScape  [(https://nassgeodata.gmu.edu/CropScape/)](https://nassgeodata.gmu.edu/CropScape/). The CDL is a raster, geo-referenced, crop-specific land cover data layer created annually for the continental United States using moderate resolution satellite imagery and extensive agricultural ground truth. All historical CDL products are available for use and free for download through CropScape
+>https://www.nass.usda.gov/Research_and_Science/Cropland/sarsfaqs2.php
 
 
+ Distance feature was also removed. This model will predict an HUC12 boundary with area of crops, weather data, nearby NO2 monitoring data, and emissions from correlated NO2 emissions from point source locations within the airshed. 
+
+```python
+Model Evaluation Metrics
+Mean Squared Error: 0.97
+Root Mean Square Error: 0.98
+Mean Abs. % Error: xx
+```
+[insert rf importance image]
+[insert p importance image]
+[insert shap image]
+
+This model, while it has a higher rmse of .98 from .58, it gives some insight into how crops impact TN. 
+
+When looking at the feature importances from these plots, it appears the top 5 important features are:
+* Double Crop barley/soybeans
+* Clovers
+* Corn 
+* Open Water
+* Deciduous Forest
+
+Open water & Deciduous Forest have an inverse correlation to TN. This could be that a reduction of the area of these two, mean more developed land (for people, crops, pastures etc.) that contribue to nitrogen runoff. It could also be from the dilution of the pollutant (more open water) or some environmental process of deciduous forests on nitrogen runoff.
+
+Clovers, double crops of barley/soybeans and corn seem to have the highest impact to TN in the watershed.  Something to keep in mind about these results. Corn and soybeans both require a lot of nitrogen. Corn utilizes 1lb of nitrogen / bushel of grain<sup>2</sup>, and soybean utilizes 5lbs of n/bushel.<sup>3</sup> When looking at correlations of crop area to TN, alfalfa, grassland/pasture & pumpkins round out the top 5 crops. 
+
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_corr.PNG" title="Top Correlated Features with TN"></img>
+
+**More study is needed**
+The above importance features showcase the complexity of this problem. For example, an interesting crop shown above as impactful is 'clover'.  Clovers <sup>4</sup>(and alfalfa<sup>5</sup>) can be utilized to increase the soil's nitrogen levels, taken from the air. So while it may look like it would be beneficial to not plant clovers because it leads to an increase in TN in the tributaries, it could have an overall positive effect on the environment<sup>5</sup>.  
+Another interesting observation, from the plots above, it shows that wetlands (*lc_90*, *lc_95*, *lc_9t*) show a somewhat inverse correlation to TN. However alfalfa needs dry roots to be effective, alfalfa grown in wetlands will not be as affective in fixating nitrogen<sup>6</sup>. 
+
+* Looking at distributions of TN across these crops could help give some insight into what runoff might look like and how to minimize the flow of nitrogen in the tributatries and the bay.
+* More knowledge of nitrogen utilization for these crops, the amounts needed, and application may prove useful and trying to determine how to limit TN runoff into the Chesapeake bay.
+* Using a hurdle poisson regression model <sup>7</sup>could prove useful in helping to predict and discover more details about the different factors contributing to TN in the bay.
+* Further exploration segmenting different HUC12 boundaries in the watershed could prove useful in identifying the different distrubutions of TN in the bay
+* Consider adjusting report card/indicator metrics to take into account how close/far from the mouth of the bay <sup>8</sup>.  Sites near the bay are seemingly 'good' or 'very good', however the pollution at those points may be diluted and therefore understating the amount of TN  being realsed into the bay compared to HUC areas upstream.
+
+
+
+<sup>1</sup>https://www.nass.usda.gov/Research_and_Science/Cropland/docs/MuellerICASVI_CDL.pdf
+<sup>2</sup>https://emergence.fbn.com/agronomy/how-much-nitrogen-does-your-corn-need
+<sup>3</sup> https://agfax.com/2014/01/02/adding-nitrogen-soybeans-can-improve-yields/
+<sup>4</sup>http://www.midwestforage.org/pdf/61.pdf.pdf
+<sup>5</sup>https://www.uaex.edu/publications/pdf/FSA-2160.pdf
+<sup>6</sup>https://ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=10478
+<sup>7</sup>https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013WR014372
+<sup>8</sup>https://ian.umces.edu/ecocheck/report-cards/chesapeake-bay/2012/indicators/total_nitrogen/#_Data_Map
 ## Authors
 
 * Berenice Dethier
