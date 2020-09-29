@@ -266,7 +266,7 @@ Root Mean Square Error: 0.583
 Mean Abs. % Error: 19.917
 ```
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi2_model1.PNG" width="450"></img>
-<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi2_model2.PNG" width="450"></img>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi2_model2.PNG" width="450"></img> <br>
 While there is an observed improvement from the XGBoost or Catboost model, there is still room for improvement, as the mean % absolute error is ~20%. Plotting these will reveal that the residuals are larger for larger values of TN.
 
 For the model with observations of larger TN and further from the mouth of the bay one of the most important features is *lc_82* which corresponds to 'cultivated crops', however this doesn't give the best indication of which crops are impacting TN in the watershed. You can see in the difference between SHAP plots of the Catboost model that indicate a higher % of an HUC area leads to higher TN values, and the hurdle ensemble model that show higher percent area of HUC lead to lower TN values. There are more than 70 categories of crops in the Chesapeake Bay watershed, the most in terms of acreage being hay, corn & soybeans for 2019. These crops may impact TN in the watershed differently, as they have different nitrogen updatakes.  <br/>
@@ -288,13 +288,13 @@ The data was obtained from USDA's Cropscape.
 Model Evaluation Metrics
 Mean Squared Error: 0.97
 Root Mean Square Error: 0.98
-Mean Abs. % Error: xx
+Mean Abs. % Error: 20.95
 ```
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_perm_importance.PNG"></img>
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_rf_importance.PNG" width="450"></img>
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_shap.PNG" width="450"></img>
 
-This model, while it has a higher rmse of **.98** from **.58**, it gives some insight into how crops impact TN. 
+This model, while it has a higher rmse of **.98** from **.58** from the model that uses *lc_82*, it gives some insight into how crops impact TN. 
 
 When looking at the feature importances from these plots, it appears the top 5 important features are:
 * Double Crop barley/soybeans
