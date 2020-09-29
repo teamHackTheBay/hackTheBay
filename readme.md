@@ -293,7 +293,7 @@ Mean Squared Error: 1.7
 Root Mean Square Error: 1.3
 Mean Abs. % Error: 18.7
 ```
-<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_perm_importance.PNG" width="500"></img>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_perm_importance.PNG"></img>
 <br>
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_shap.PNG"></img>
 
@@ -327,18 +327,21 @@ Another interesting observation, from the plots above, it shows that wetlands (*
 
 
 
- <font size=2><sup>1</sup>https://www.nass.usda.gov/Research_and_Science/Cropland/docs/MuellerICASVI_CDL.pdf <br>
-<sup>2</sup>https://emergence.fbn.com/agronomy/how-much-nitrogen-does-your-corn-need <br>
-<sup>3</sup> https://agfax.com/2014/01/02/adding-nitrogen-soybeans-can-improve-yields/ <br>
-<sup>4</sup>https://www.ers.usda.gov/data-products/state-export-data/annual-state-agricultural-exports/<br>
-<sup>5</sup>https://www.uaex.edu/publications/pdf/FSA-2160.pdf <br>
-<sup>6</sup>http://www.midwestforage.org/pdf/61.pdf.pdf <br>
-<sup>7</sup>https://news.stanford.edu/news/2010/february22/legumes-nitrogen-fertilizer-022610.html<br>
-<sup>8</sup>https://www.resilience.org/stories/2018-09-20/improving-air-quality-with-clover/<br>
-<sup>9</sup>https://ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=10478 <br>
-<sup>10</sup>https://www.ers.usda.gov/amber-waves/2011/september/nitrogen-footprint/
-<sup>11</sup>https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013WR014372 <br>
-<sup>12</sup>https://ian.umces.edu/ecocheck/report-cards/chesapeake-bay/2012/indicators/total_nitrogen/#_Data_Map <br></font>
+<sup>1</sup> <font size=2>https://www.nass.usda.gov/Research_and_Science/Cropland/docs/MuellerICASVI_CDL.pdf </font><br>
+<sup>2</sup> <font size=2>https://emergence.fbn.com/agronomy/how-much-nitrogen-does-your-corn-need </font><br>
+<sup>3</sup> <font size=2> https://agfax.com/2014/01/02/adding-nitrogen-soybeans-can-improve-yields/ </font><br>
+<sup>4</sup> <font size=2>https://www.ers.usda.gov/data-products/state-export-data/annual-state-agricultural-exports/</font><br>
+<sup>5</sup> <font size=2>https://www.uaex.edu/publications/pdf/FSA-2160.pdf </font><br>
+<sup>6</sup> <font size=2>http://www.midwestforage.org/pdf/61.pdf.pdf </font><br>
+<sup>7</sup> <font size=2>https://news.stanford.edu/news/2010/february22/legumes-nitrogen-fertilizer-022610.html</font><br>
+<sup>8</sup> <font size=2>https://www.resilience.org/stories/2018-09-20/improving-air-quality-with-clover/</font><br>
+<sup>9</sup> <font size=2>https://ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=10478 </font><br>
+<sup>10</sup> <font size=2>https://www.ers.usda.gov/amber-waves/2011/september/nitrogen-footprint/</font><br>
+<sup>11</sup> <font size=2>https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013WR014372 </font><br>
+<sup>12</sup> <font size=2>https://ian.umces.edu/ecocheck/report-cards/chesapeake-bay/2012/indicators/total_nitrogen/#_Data_Map </font><br>
+
+Lundberg, Scott et al (2020). From local explanations to global understanding with explainable AI for trees. *Naure Machine Learning, 2*, 56-67.https://rdcu.be/b0z70
+
 ## Authors
 
 * Berenice Dethier
