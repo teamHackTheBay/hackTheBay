@@ -258,7 +258,7 @@ Root Mean Square Error: 0.6153584991792396
 * [Random Forest Ensemble Model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/notebook/ensemble_model.ipynb)
 
 **Improving the above model when it comes to scalability.** <br>
-The above model requires HUC12 boundary's history of Total Nitrogen samples. We could use a global mean for that portion of the data, however, the model can be even more improved by removing this mean encoded feature. When removing this feature the model improves.
+The above model requires HUC12 boundary's history of Total Nitrogen samples. We could use a global mean for that portion of the data, however, the model can be further improved by removing this mean encoded feature. When removing this feature we see a further reduction in RMSE.
 ```python
 Ensemble Model Evaluation Metrics
 Mean Squared Error: 0.340
