@@ -271,11 +271,11 @@ Mean Abs. % Error: 19.917
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi2_model2.PNG" width="450"></img><img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi2_model2_shap.PNG" width="450"></img><br>
 While there is an observed improvement from the XGBoost or Catboost model, there is still room for improvement, as the mean % absolute error is ~20%. Plotting these will reveal that the residuals are larger for larger values of TN.
 
-For the model with observations of larger TN and further from the mouth of the bay one of the most important features is *lc_82* which corresponds to 'cultivated crops', however this doesn't give the best indication of which crops are impacting TN in the watershed. You can see in the difference between SHAP plots of the Catboost model that indicate a higher % of an HUC area leads to higher TN values, and the hurdle ensemble model that show higher percent area of HUC lead to lower TN values. There are more than 70 categories of crops in the Chesapeake Bay watershed, the most in terms of acreage being hay, corn & soybeans for 2019. These crops may impact TN in the watershed differently, as they have different nitrogen updatakes.  <br/>
+For the model with observations of larger TN and further from the mouth of the bay, one of the most important features is *lc_82* which corresponds to 'cultivated crops', however this doesn't give the best indication of which crops are impacting TN in the watershed. There are more than 70 categories of crops in the Chesapeake Bay watershed, the most in terms of acreage being hay, corn & soybeans for 2019. These crops may impact TN in the watershed differently, as they have different nitrogen uptakes.  <br/>
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/crops_capture_ws.PNG" title="Land Cover Category Acreage in the Watershed" alt="https://nassgeodata.gmu.edu/CropScape/"></img>
 
 **Utilizing crop features** <br>
-Lastly, a model was built for portion of observations that had a high TN. The land cover features from all previous models were replaced with land use data describing the type of crop, along with previous categories (developed land, forest etc.) yearly from 2015-2019. These values were not normalized per observation, equating to roughly 1 value (or pixel value) equates to 30 meters or land cover type<sup>1</sup>. A histogram-based gradient boosting regression tree was used to model the data with a poisson loss.
+Lastly, a model was built for the portion of observations that had a high TN. The land cover features from all previous models were replaced with land use data describing the type of crop, along with previous categories (developed land, forest etc.) yearly from 2015-2019. These values were not normalized per observation, equating to roughly 1 value (or pixel value) equates to 30 meters of land cover type<sup>1</sup>. A histogram-based gradient boosting regression tree was used to model the data with a poisson loss.
 * [Ensemble Model - crop_data Notebook](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/notebook/3-ensemble_model-crop_data.ipynb)
 
 The data was obtained from USDA's Cropscape.
@@ -285,7 +285,7 @@ The data was obtained from USDA's Cropscape.
 ><font size=2>https://www.nass.usda.gov/Research_and_Science/Cropland/sarsfaqs2.php</font>
 
 
- Distance feature was also removed. This model will predict TN of a HUC12 boundary with area of crops, weather data, nearby NO2 monitoring data, and emissions from correlated NO2 emissions from point source locations within the airshed. 
+ Distance feature was also removed. The previous model relied heavily upon this feature for prediction. This model will predict TN of a HUC12 boundary with area of crops, weather data, nearby NO2 monitoring data, and emissions from correlated NO2 emissions from point source locations within the airshed. 
 
 ```python
 Model Evaluation Metrics
