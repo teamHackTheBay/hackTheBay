@@ -211,7 +211,7 @@ print(np.sqrt(mean_squared_error(y_test, y_pred)))
 ```
       
 ## A further model improvement 
-
+* [Random Forest Ensemble Model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/notebook/1-ensemble_model.ipynb)
 #### During data analysis we found that feature relationships with TN varied within the watershed. 
 
 ```python
@@ -255,10 +255,11 @@ Root Mean Square Error: 0.6153584991792396
       * Group 2's TN values rely more upon how land cover is utilized, specifically crop land. Determining ways to mitigate cropland run off could help reduce TN.      
       * An explanation for 'distance to the outflow of the bay' being such an important feature, is that there is less water for the pollutant to be diluted in the further from the bay you are, making run off TN values
 
-* [Random Forest Ensemble Model](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/notebook/ensemble_model.ipynb)
+
 
 **Improving the above model when it comes to scalability.** <br>
 The above model requires HUC12 boundary's history of Total Nitrogen samples. We could use a global mean for that portion of the data, however, the model can be further improved by removing this mean encoded feature. When removing this feature we see a further reduction in RMSE.
+* [Ensemble Model - mean encoding removed](https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/notebook/2-%20ensemble_model-mean_encoding_removed.ipynb)
 ```python
 Ensemble Model Evaluation Metrics
 Mean Squared Error: 0.340
