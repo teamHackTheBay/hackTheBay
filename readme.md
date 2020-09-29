@@ -266,7 +266,8 @@ Root Mean Square Error: 0.583
 Mean Abs. % Error: 19.917
 ```
 <img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi2_model1.PNG" width="450"></img>
-<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi2_model2.PNG" width="450"></img> <br>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi2_model1_shap.PNG" width="450"></img>
+<img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi2_model2.PNG" width="450"></img><img src="https://github.com/teamHackTheBay/hackTheBay/blob/master/models/ensemble_model/visuals/fi2_model2_shap.PNG" width="450"></img><br>
 While there is an observed improvement from the XGBoost or Catboost model, there is still room for improvement, as the mean % absolute error is ~20%. Plotting these will reveal that the residuals are larger for larger values of TN.
 
 For the model with observations of larger TN and further from the mouth of the bay one of the most important features is *lc_82* which corresponds to 'cultivated crops', however this doesn't give the best indication of which crops are impacting TN in the watershed. You can see in the difference between SHAP plots of the Catboost model that indicate a higher % of an HUC area leads to higher TN values, and the hurdle ensemble model that show higher percent area of HUC lead to lower TN values. There are more than 70 categories of crops in the Chesapeake Bay watershed, the most in terms of acreage being hay, corn & soybeans for 2019. These crops may impact TN in the watershed differently, as they have different nitrogen updatakes.  <br/>
